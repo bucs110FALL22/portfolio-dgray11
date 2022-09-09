@@ -32,7 +32,7 @@ my_turtle.left(90)
 
 window.exitonclick()
 
-#num_slides = int(input("enter number of sides: "))
+#num_sides = int(input("enter number of sides: "))
 #length = 50
 #angle = 360 / num_sides
 #for i in [angle]*num_sides:
