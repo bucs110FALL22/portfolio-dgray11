@@ -1,0 +1,7 @@
+def foo(message, num = 1):
+  print(message * num)
+
+
+foo('Welcome')
+foo('Viewers', 3)
+
