@@ -20,3 +20,14 @@ class pipe:
       self.inside_box = nothing
 
 
+class Background:
+  def __init__(self):
+    self.clouds = [] #cloud class
+    self.color = "blue"
+    self.random_blocks = True
+
+class Player:
+  def __init__(self):
+    position = x, y
+    image = "imagefile.png"
+    score = 0
