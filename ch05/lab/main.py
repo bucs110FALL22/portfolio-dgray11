@@ -28,6 +28,8 @@ from collections import defaultdict
   #pygame.draw.lines(window, [200,200,255], False, (x,y))
   #pygame.display.flip()
 
+display = pygame.display.set_mode((400, 400))
+
 def algorithm(n):
     count = 0
     while n > 1:
@@ -46,6 +48,8 @@ def make_dictionary(upper_Limit):
   lower_limit = 2
   iters = {}
   true_iters = []
+  
+  
   iters = defaultdict(list)
   for i in range(lower_limit, upper_limit):
       if algorithm(i) > max_val:
@@ -63,14 +67,17 @@ if __name__ == "__main__":
     max_so_far = 0
     scale = 17
     scale_iters = [(x * scale, y * scale) for x, y in real_iters]
-    black = (255, 255, 255)
-    display = pygame.display.set_mode((400, 400))
+    aqua = (127,255,212)
+  
     font = pygame.font.Font(None, 30)
-    pygame.draw.lines(display, black, False, scale_iters)
+    pygame.draw.lines(display, aqua, False, scale_iters)
     new_display = pygame.transform.flip(display, False, True)
     display.blit(new_display, (0, 0))
+  
     message = "The maximum value is at " + str((max_x, max_val))
-    msg = font.render(message, True, black)
-    display.blit(msg, (0, 0))
+  
+    msg = font.render(message, True, aqua)
+    display.blit(msg, (10, 10))
+  
     pygame.display.update()
 
